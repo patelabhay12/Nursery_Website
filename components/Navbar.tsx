@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { AppProps } from 'next/app';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineShoppingCart, AiFillCloseCircle, AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { MdAccountCircle } from 'react-icons/md';
 
-const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+const Navbar = ({ cart,addToCart,removeFromCart, clearCart, subTotal }) => {
     // console.log(cart, addToCart, removeFromCart, clearCart, subTotal);
 
 
@@ -51,7 +52,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                 </ul>
             </div>
             <div className="cart cursor-pointer absolute right-0 top-4 mx-5 flex">
-              <Link href={'/login'}><MdAccountCircle className='text-xl md:text-3xl mx-4' /></Link>
+                <Link href={'/login'}><MdAccountCircle className='text-xl md:text-3xl mx-4' /></Link>
                 <AiOutlineShoppingCart onClick={toggleCart} className='text-xl md:text-3xl' />
             </div>
 
