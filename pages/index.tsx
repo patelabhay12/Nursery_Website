@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CodesWear.com - Wear the code</title>
+        <title>Nursery.com</title>
         <meta name="description" content="CodesWear.com - Wear the code" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Navbar /> */}
       <div>
-        <Image src="/home2.jpeg" alt="Nothing" width={1500} height={600} />
+        <Image src="/main.avif" alt="Nothing" width={1500} height={600} />
       </div>
 
       <section className="text-gray-600 body-font">

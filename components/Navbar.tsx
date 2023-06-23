@@ -44,10 +44,10 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             </div>
             <div className="nav">
                 <ul className='flex items-center space-x-5 font-mono  md:text-md'>
-                    <Link href={'/tshirts'} legacyBehavior><a><li>Trees</li></a></Link>
-                    <Link href={'/hoodies'} legacyBehavior><a><li>Flowers</li></a></Link>
-                    <Link href={'/stickers'} legacyBehavior><a><li>Decorative plants</li></a></Link>
-                    <Link href={'/mugs'} legacyBehavior><a><li>Decorative flowers</li></a></Link>
+                    {/* <Link href={'/tshirts'} legacyBehavior><a><li>Trees</li></a></Link> */}
+                    {/* <Link href={'/hoodies'} legacyBehavior><a><li>Flowers</li></a></Link> */}
+                    <Link href={'/Decorative_plants'} legacyBehavior><a><li>Decorative plants</li></a></Link>
+                    <Link href={'/Decorative_flowers'} legacyBehavior><a><li>Decorative flowers</li></a></Link>
                 </ul>
             </div>
             <div className="cart cursor-pointer absolute right-0 top-4 mx-5 flex">
