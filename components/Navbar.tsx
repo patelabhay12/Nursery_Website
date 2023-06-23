@@ -6,7 +6,20 @@ import { AiOutlineShoppingCart, AiFillCloseCircle, AiFillPlusCircle, AiFillMinus
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { MdAccountCircle } from 'react-icons/md';
 
-const Navbar = ({ cart,addToCart,removeFromCart, clearCart, subTotal }) => {
+interface CartItem {
+    // Define the properties of a cart item
+  }
+  
+  interface NavbarProps {
+    cart: CartItem[];
+    addToCart: Function; // Adjust the type accordingly
+    removeFromCart: Function; // Adjust the type accordingly
+    clearCart: Function; // Adjust the type accordingly
+    subTotal: number; // Adjust the type accordingly
+}
+  
+// const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) =>
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }: NavbarProps) =>{
     // console.log(cart, addToCart, removeFromCart, clearCart, subTotal);
 
 
@@ -54,9 +67,9 @@ const Navbar = ({ cart,addToCart,removeFromCart, clearCart, subTotal }) => {
             <div className="cart cursor-pointer absolute right-0 top-4 mx-5 flex">
                 <Link href={'/login'}><MdAccountCircle className='text-xl md:text-3xl mx-4' /></Link>
                 <AiOutlineShoppingCart onClick={toggleCart} className='text-xl md:text-3xl' />
-            </div>
+            </div> 
 
-            <div ref={ref} className={`sideCart z-10 w-72 h-[100vh] absolute top-0 right-0 bg-pink-100 py-10 px-8 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'} rounded-bl-xl`}>
+            <div ref={ref} className={`sideCart z-10 w-72 h-[100vh] absolute top-0 right-0 bg-pink-100 py-10 px-8  transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'} rounded-bl-xl`}>
                 <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
                 <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-400'><AiFillCloseCircle /></span>
 
